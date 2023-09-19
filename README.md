@@ -24,6 +24,7 @@ Clone the repository to the desired location, then create a symbolic link to `$X
 
 ```shell
 git clone https://github.com/JNSFilipe/astrovim_config
+mkdir -p /home/${USER}/.config/astronvim/lua
 ln -s $(pwd)/astrovim_config /home/${USER}/.config/astronvim/lua/user
 ```
 
