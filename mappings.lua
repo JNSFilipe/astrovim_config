@@ -32,6 +32,15 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+
+    ["<leader>j"]  = { name = "󱋿 Jump" },
+    ["<leader>js"] = {function() require("flash").jump() end,              desc = "Flash" },
+    ["<leader>jj"] = {function() require("flash").jump() end,              desc = "Flash" },
+    ["<leader>jS"] = {function() require("flash").treesitter() end,        desc = "Flash TreeSitter" },
+    ["<leader>jk"] = {function() require("flash").treesitter() end,        desc = "Flash TreeSitter" },
+    ["<leader>jr"] = {function() require("flash").remote() end,            desc = "Remote Flase" },
+    ["<leader>jR"] = {function() require("flash").treesitter_search() end, desc = "TreeSitter Search" },
+    ["<leader>jT"] = {function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
   },
   t = {
     -- setting a mapping to false will disable it
