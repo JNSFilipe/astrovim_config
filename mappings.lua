@@ -18,6 +18,21 @@ return {
     --   desc = "Previous buffer",
     -- },
 
+    -- buffer switching
+    ["<Tab>"] = {
+      function()
+        if #vim.t.bufs > 1 then
+          require("telescope.builtin").buffers { sort_mru = true, ignore_current_buffer = true }
+        else
+          require("astronvim.utils").notify "No other buffers open"
+        end
+      end,
+      desc = "Switch Buffers",
+    },
+
+    ["<leader><tab>"] = {"<c-w><c-p>", desc = "Previous Pane"},
+
+    ["<leader>tt"] = {":ToggleTerm<CR>", desc = "Toggle Terminal"},
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
@@ -41,9 +56,24 @@ return {
     ["<leader>jr"] = {function() require("flash").remote() end,            desc = "Remote Flase" },
     ["<leader>jR"] = {function() require("flash").treesitter_search() end, desc = "TreeSitter Search" },
     ["<leader>jT"] = {function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
+
+    -- TODO: Override the Save file command
+    ["<leader>w"]  = { name = " Windows" },
+    ["<leader>wh"] = { ":sp<CR>",  desc = "Horizontal Split" },
+    ["<leader>wv"] = { ":vsp<CR>", desc = "Vertical Split" },
+    ["<leader>wc"] = { "<c-w>q",   desc = "Close Window" },
+    ["<leader>wo"] = { "<c-w>o",   desc = "Close All Other Windows" },
+
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
+    ["<esc>"] = {[[<C-\><C-n>]]},
+    ["jj"]    = {[[<C-\><C-n>]]},
+    ["<c-h>"]    = {[[<Cmd>wincmd h<CR>]]},
+    ["<c-j>"]    = {[[<Cmd>wincmd j<CR>]]},
+    ["<c-k>"]    = {[[<Cmd>wincmd k<CR>]]},
+    ["<c-l>"]    = {[[<Cmd>wincmd l<CR>]]},
+    ["<c-w>"]    = {[[<C-\><C-n><C-w>]]},
   },
 }
