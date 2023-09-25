@@ -46,7 +46,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     ["<leader>j"]  = { name = "󱋿 Jump" },
     ["<leader>js"] = {function() require("flash").jump() end,              desc = "Flash" },
@@ -57,12 +57,19 @@ return {
     ["<leader>jR"] = {function() require("flash").treesitter_search() end, desc = "TreeSitter Search" },
     ["<leader>jT"] = {function() require("flash").toggle() end,            desc = "Toggle Flash Search" },
 
-    -- TODO: Override the Save file command
-    ["<leader>w"]  = { name = " Windows" },
+    ["<leader>w"]  = { name = " Windows", desc = " Windows"  },
     ["<leader>wh"] = { ":sp<CR>",  desc = "Horizontal Split" },
     ["<leader>wv"] = { ":vsp<CR>", desc = "Vertical Split" },
     ["<leader>wc"] = { "<c-w>q",   desc = "Close Window" },
     ["<leader>wo"] = { "<c-w>o",   desc = "Close All Other Windows" },
+
+    ["<leader>:"] = {"<cmd>Telescope command_history<cr>", desc = "Command History"},
+
+    ["<leader><leader>"]  = { name = "󱡁 Harpoon", desc = "󱡁 Harpoon"},
+    ["<leader><leader>h"] = {function() require("harpoon.mark").nav_prev() end,               desc = "Go to Previous Buffer" },
+    ["<leader><leader>l"] = {function() require("harpoon.mark").nav_next() end,               desc = "Go to Next Buffer" },
+    -- ["<leader><leader>p"] = {function() require("harpoon.term").sendCommand(1, "pytest") end, desc = "Send 'pytest' to terminal" },
+    ["<leader><leader>c"] = {function() require('harpoon.cmd-ui').toggle_quick_menu() end,    desc = "Command List" },
 
   },
   t = {

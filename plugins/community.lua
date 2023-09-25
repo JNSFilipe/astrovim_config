@@ -7,5 +7,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin", enabled = true },
   { import = "astrocommunity.bars-and-lines.vim-illuminate", enable = true },
   { import = "astrocommunity.motion.flash-nvim", enable = true },
+  { import = "astrocommunity.motion.harpoon", enable = true },
+  { import = "astrocommunity.editing-support.todo-comments-nvim", enable = true },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
