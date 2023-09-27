@@ -42,6 +42,22 @@ return {
         "cpp",
         "c",
       })
+
+      -- configure debugger calls
+      opts.handlers = {
+        -- for python
+        python = function(config)
+            config.adapters = {
+	            type = "executable",
+	            command = "/usr/bin/python3",
+	            args = {
+		            "-m",
+		            "debugpy.adapter",
+	            },
+            }
+            require('mason-nvim-dap').default_setup(config) -- don't forget this!
+        end
+      }
     end,
   },
 }

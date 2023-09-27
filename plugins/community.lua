@@ -9,5 +9,6 @@ return {
   { import = "astrocommunity.motion.flash-nvim", enable = true },
   { import = "astrocommunity.motion.harpoon", enable = true },
   { import = "astrocommunity.editing-support.todo-comments-nvim", enable = true },
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text", enable = true},
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
