@@ -21,16 +21,16 @@ return {
     -- buffer switching
     ["<Tab>"] = {
       function()
-        if #vim.t.bufs > 1 then
+        if #vim.t.bufs > 2 then
           require("telescope.builtin").buffers { sort_mru = true, ignore_current_buffer = true }
+        elseif #vim.t.bufs > 1 then
+          vim.api.nvim_command('bprevious')
         else
           require("astronvim.utils").notify "No other buffers open"
         end
       end,
       desc = "Switch Buffers",
     },
-
-    ["<leader><tab>"] = {"<c-w><c-p>", desc = "Previous Pane"},
 
     ["<leader>tt"] = {":ToggleTerm<CR>", desc = "Toggle Terminal"},
     -- mappings seen under group name "Buffer"
