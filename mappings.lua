@@ -65,11 +65,14 @@ return {
 
     ["<leader>:"] = {"<cmd>Telescope command_history<cr>", desc = "Command History"},
 
-    ["<leader><leader>"]  = { name = "󱡁 Harpoon", desc = "󱡁 Harpoon"},
-    ["<leader><leader>h"] = {function() require("harpoon.mark").nav_prev() end,               desc = "Go to Previous Buffer" },
-    ["<leader><leader>l"] = {function() require("harpoon.mark").nav_next() end,               desc = "Go to Next Buffer" },
-    -- ["<leader><leader>p"] = {function() require("harpoon.term").sendCommand(1, "pytest") end, desc = "Send 'pytest' to terminal" },
-    ["<leader><leader>c"] = {function() require('harpoon.cmd-ui').toggle_quick_menu() end,    desc = "Command List" },
+    ["<leader>h"]  = { name = "󱡁 Harpoon", desc = "󱡁 Harpoon"},
+    ["<leader>hh"] = {function() require("harpoon.mark").nav_prev() end,               desc = "Go to Previous Buffer" },
+    ["<leader>hl"] = {function() require("harpoon.mark").nav_next() end,               desc = "Go to Next Buffer" },
+    -- ["<leader>hp"] = {function() require("harpoon.term").sendCommand(1, "pytest") end, desc = "Send 'pytest' to terminal" },
+    ["<leader>hc"] = {function() require('harpoon.cmd-ui').toggle_quick_menu() end,    desc = "Command List" },
+
+    ["<leader><leader>"]  = { function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end,desc = "Search within Files"},
+    ["<C-p>"]  = { function() require("telescope.builtin").git_files() end, desc = "Search in Files"},
 
   },
   t = {
