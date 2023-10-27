@@ -10,6 +10,7 @@ return {
   { import = "astrocommunity.motion.harpoon", enable = true },
   { import = "astrocommunity.motion.nvim-surround", enable = true },
   { import = "astrocommunity.editing-support.todo-comments-nvim", enable = true },
+  { import = "astrocommunity.project.project-nvim", enable = true},
   { import = "astrocommunity.debugging.nvim-dap-virtual-text", enable = true},
   { import = "astrocommunity.diagnostics.lsp_lines-nvim", enable = true},
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },

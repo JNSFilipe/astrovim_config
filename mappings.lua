@@ -74,6 +74,45 @@ return {
     ["<leader><leader>"]  = { function() require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") }) end,desc = "Search within Files"},
     ["<C-p>"]  = { function() require("telescope.builtin").git_files() end, desc = "Search in Files"},
 
+
+    -- Plugin Manager
+    ["<leader>a"] = { name = " Astro", desc = " Astro"},
+    ["<leader>ai"] = { function() require("lazy").install() end, desc = "Plugins Install" },
+    ["<leader>as"] = { function() require("lazy").home() end, desc = "Plugins Status" },
+    ["<leader>aS"] = { function() require("lazy").sync() end, desc = "Plugins Sync" },
+    ["<leader>au"] = { function() require("lazy").check() end, desc = "Plugins Check Updates" },
+    ["<leader>aU"] = { function() require("lazy").update() end, desc = "Plugins Update" },
+    -- AstroNvim
+    ["<leader>aa"] = { "<cmd>AstroUpdatePackages<cr>", desc = "Update Plugins and Mason Packages" },
+    ["<leader>aA"] = { "<cmd>AstroUpdate<cr>", desc = "AstroNvim Update" },
+    ["<leader>av"] = { "<cmd>AstroVersion<cr>", desc = "AstroNvim Version" },
+    ["<leader>al"] = { "<cmd>AstroChangelog<cr>", desc = "AstroNvim Changelog" },
+    -- Package Manager
+    -- if is_available "mason.nvim" then -- TODO: Make this if work
+      ["<leader>am"] = { "<cmd>Mason<cr>", desc = "Mason Installer" },
+      ["<leader>aM"] = { "<cmd>MasonUpdateAll<cr>", desc = "Mason Update" },
+    -- end
+
+
+    -- Project
+    ["<leader>p"] = { function() require("telescope").extensions.projects.projects{} end, desc = "Change Project"},
+    ["<leader>pi"] = false,
+    ["<leader>ps"] = false,
+    ["<leader>pS"] = false,
+    ["<leader>pu"] = false,
+    ["<leader>pU"] = false,
+    ["<leader>pa"] = false,
+    ["<leader>pA"] = false,
+    ["<leader>pv"] = false,
+    ["<leader>pl"] = false,
+    -- if is_available "mason.nvim" then -- TODO: Make this if work
+      ["<leader>pm"] = false,
+      ["<leader>pM"] = false,
+    -- end
+
+
+
+
   },
   t = {
     -- setting a mapping to false will disable it

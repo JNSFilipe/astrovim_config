@@ -19,6 +19,16 @@ return {
         "                                   ",
         " -<  N    E    O    V    I    M  >-"
       }
+
+      local button, get_icon = require("astronvim.utils").alpha_button, require("astronvim.utils").get_icon
+      opts.section.buttons.val = {
+        button("LDR n  ", get_icon("FileNew", 2, true) .. "New File  "),
+        button("LDR f f", get_icon("Search", 2, true) .. "Find File  "),
+        button("LDR p  ", get_icon("FolderOpen", 2, true) .. "Open Project"),
+        button("LDR f o", get_icon("DefaultFile", 2, true) .. "Recents  "),
+        button("LDR p '", get_icon("Bookmarks", 2, true) .. "Bookmarks  "),
+        button("LDR S l", get_icon("Refresh", 2, true) .. "Last Session  "),
+      }
       return opts
     end,
   },
