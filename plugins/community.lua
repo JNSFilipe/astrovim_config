@@ -5,6 +5,7 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.colorscheme.catppuccin", enabled = true },
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim", enable = true},
   { import = "astrocommunity.bars-and-lines.vim-illuminate", enable = true },
   { import = "astrocommunity.motion.flash-nvim", enable = true },
   { import = "astrocommunity.motion.harpoon", enable = true },
