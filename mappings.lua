@@ -104,8 +104,8 @@ return {
       ["<leader>pM"] = false,
     -- end
 
-
-
+    -- Change Theme
+    ["<leader>uT"] = { function() require("telescope.builtin").colorscheme{} end, desc = "Change Theme"},
 
   },
   t = {
