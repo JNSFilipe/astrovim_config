@@ -146,6 +146,26 @@ return {
       return opts
     end,
   },
+
+  -- Costumize toggleterm
+  {
+    "akinsho/toggleterm.nvim",
+    opts = function(_, opts)
+    opts.size = function(term)
+        if term.direction == "horizontal" then
+          -- return 15
+          return vim.o.rows * 0.1
+        elseif term.direction == "vertical" then
+          return vim.o.columns * 0.3
+        elseif term.direction == "float" then
+          return 10
+        end
+      end
+      opts.direction = "vertical"
+      return opts
+    end
+  }
+
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
