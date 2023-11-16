@@ -15,20 +15,21 @@ return {
 
   -- Themes
   { import = "astrocommunity.colorscheme.catppuccin", enabled = true },
-  { import = "astrocommunity.colorscheme.oxocarbon-nvim", enable = true},
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim", enable = true },
 
   -- Aspect
   { import = "astrocommunity.bars-and-lines.vim-illuminate", enable = true },
-  { import = "astrocommunity.diagnostics.lsp_lines-nvim", enable = true},
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim", enable = true },
 
   -- Coding
   { import = "astrocommunity.motion.flash-nvim", enable = true },
   { import = "astrocommunity.motion.harpoon", enable = true },
   { import = "astrocommunity.motion.nvim-surround", enable = true },
   { import = "astrocommunity.editing-support.todo-comments-nvim", enable = true },
-  { import = "astrocommunity.debugging.nvim-dap-virtual-text", enable = true},
+  { import = "astrocommunity.debugging.nvim-dap-virtual-text", enable = true },
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 
   -- Utility
-  { import = "astrocommunity.project.project-nvim", enable = true},
+  { import = "astrocommunity.project.project-nvim", enable = true },
+  { import = "astrocommunity.terminal-integration.vim-tpipeline", enable = true },
 }
