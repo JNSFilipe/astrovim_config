@@ -30,6 +30,4 @@ return {
   -- { import = "astrocommunity.completion.copilot-lua-cmp" },
 
   -- Utility
-  { import = "astrocommunity.project.project-nvim", enable = true },
-  { import = "astrocommunity.terminal-integration.vim-tpipeline", enable = true },
 }
