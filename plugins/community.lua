@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.pack.cmake", enabled = true },
   { import = "astrocommunity.pack.cpp", enabled = true },
   { import = "astrocommunity.pack.lua", enabled = true },
+  { import = "astrocommunity.pack.go", enabled = true },
   { import = "astrocommunity.pack.markdown", enabled = true },
   { import = "astrocommunity.pack.python", enabled = true },
   { import = "astrocommunity.pack.rust", enabled = true },

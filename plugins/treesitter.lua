@@ -14,6 +14,7 @@ return {
       "arduino",
       "bash",
       "bibtex",
+      "go",
     })
   end,
 }
