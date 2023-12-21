@@ -9,4 +9,30 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  -- "PaterJason/cmp-conjure",
+  -- {
+  --   config = function()
+  --     local cmp = require "cmp"
+  --     local config = cmp.get_config()
+  --     table.insert(config.sources, {
+  --       name = "buffer",
+  --       option = {
+  --         sources = {
+  --           { name = "conjure" },
+  --         },
+  --       },
+  --     })
+  --     cmp.setup(config)
+  --   end,
+  -- },
+
+  {
+    "Olical/conjure",
+
+    ft = { "scheme", "fennel", "lua", "python", "rust", "hy", "scheme", "guile", "common-lisp" }, -- etc
+    init = function()
+      -- Set configuration options here
+      vim.g["conjure#debug"] = true
+    end,
+  },
 }
